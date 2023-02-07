@@ -1,0 +1,3 @@
+﻿dotnet ef migrations add InitialMigration --project AttendanceTracker.Persistence -s AttendanceTracker.API -c AttendanceTrackerDbContext
+
+dotnet ef migrations add InitialMigration --project <persistence_project_name_here> -s <startup_project_here>  -c <db_context_class_name>
