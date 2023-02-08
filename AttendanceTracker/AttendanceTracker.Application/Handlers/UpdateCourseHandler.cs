@@ -31,8 +31,7 @@ public class UpdateCourseHandler
             existingCourse = _mapper.Map<CourseDTO, Course>(request.Course, existingCourse);
 
             existingCourse.DateUpdated = DateTime.UtcNow;
-            //TODO: get the username from principal
-            existingCourse.UserUpdated = "postman.postman@mail.server.com";
+            existingCourse.UserUpdated = request.UserAccount.UserName;
 
             await _attendanceTrackerDbContext.SaveChangesAsync(cancellationToken);
             return _mapper.Map<Course, CourseDTO>(existingCourse);

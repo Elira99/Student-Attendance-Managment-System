@@ -5,19 +5,19 @@ using MediatR;
 namespace AttendanceTracker.Application.Commands;
 
 
-public class AddCourseCommand
+public class ConfirmAttendanceCommand
     : IRequest<CourseDTO>
 {
-    private readonly CourseDTO _course;
+    private readonly int _courseId;
     private readonly UserAccountDTO _userAccount;
 
-    public AddCourseCommand(CourseDTO course, UserAccountDTO userAccount)
+    public ConfirmAttendanceCommand(int courseId, UserAccountDTO userAccount)
     {
-        _course = course;
+        _courseId = courseId;
         _userAccount = userAccount;
     }
 
-    public CourseDTO Course => _course;
+    public int CourseId => _courseId;
 
     public UserAccountDTO UserAccount => _userAccount;
 

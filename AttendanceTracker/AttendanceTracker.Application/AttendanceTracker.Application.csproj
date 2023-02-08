@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AttendanceTracker.Domain\AttendanceTracker.Domain.csproj" />
     <ProjectReference Include="..\AttendanceTracker.Persistence\AttendanceTracker.Persistence.csproj" />
+    <ProjectReference Include="..\AttendanceTracker.Utils\AttendanceTracker.Utils.csproj" />
   </ItemGroup>
 
 </Project>

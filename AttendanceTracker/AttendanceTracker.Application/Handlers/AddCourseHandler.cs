@@ -31,8 +31,7 @@ public class AddCourseHandler
             var courseToAdd = _mapper.Map<CourseDTO, Course>(request.Course);
 
             courseToAdd.DateCreated = DateTime.UtcNow;
-            //TODO: get the username from principal
-            courseToAdd.UserCreated = "postman.postman@mail.server.com";
+            courseToAdd.UserCreated = request.UserAccount.UserName;
 
             teacher.Courses.Add(courseToAdd);
 

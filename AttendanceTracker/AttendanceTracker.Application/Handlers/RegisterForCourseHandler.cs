@@ -36,7 +36,7 @@ public class RegisterForCourseHandler
             {
                 StudentId = studentId,
                 DateCreated = DateTime.UtcNow,
-                UserCreated = "postman.postman@mail.server.com"
+                UserCreated = request.UserAccount.UserName
             };
 
             existingCourse.Registrations.Add(registration);
