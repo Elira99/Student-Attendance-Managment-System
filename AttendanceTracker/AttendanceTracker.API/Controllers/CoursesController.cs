@@ -18,7 +18,7 @@ namespace AttendanceTracker.API.Controllers
 
         }
 
-        [Authorize]
+       // [Authorize]
         [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<CourseDTO>>> GetAllCourses()
         {
