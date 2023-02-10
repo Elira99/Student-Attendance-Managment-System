@@ -17,7 +17,7 @@ namespace AttendanceTracker.API.Controllers
 
         }
 
-        [Authorize]
+      //  [Authorize]
         [HttpGet("find/{partialName}")]
         public async Task<ActionResult<IEnumerable<TeacherDTO>>> GetTeacherssByName(string partialName)
         {
