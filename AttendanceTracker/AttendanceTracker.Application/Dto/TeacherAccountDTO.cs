@@ -9,7 +9,6 @@ namespace AttendanceTracker.Application.Dto
         public TeacherAccountDTO()
         {
         }
-
         public string Password { get; set; }
     }
 }
